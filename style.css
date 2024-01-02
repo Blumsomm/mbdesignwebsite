@@ -1,0 +1,243 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: #ddd;
+}
+
+/* NAVIGATION */
+
+.site-header {
+  background-color: #ddd;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  transition: top 0.3s;
+}
+
+.logo {
+  color: black;
+  display: flex;
+  float: left;
+  margin-left: 25%;
+  font-size: 1.75em;
+  font-weight: 600;
+}
+
+/* Style the links inside the navigation bar */
+.burger-menu {
+  display: flex;
+  float: right;
+  margin-right: 25%;
+}
+
+.burger-menu a {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Introduction */
+
+.intro-container {
+  margin: 150px 25%;
+  width: 30%;
+  background-color: #ddd;
+}
+
+.introduction {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.introduction h1 {
+  font-size: 4rem;
+  word-spacing: 15px;
+  letter-spacing: 5px;
+}
+
+.introduction p {
+  font-size: 2rem;
+  word-spacing: 5px;
+  letter-spacing: 2.5px;
+}
+
+button {
+  width: auto;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+}
+
+/* About  */
+
+.about {
+  width: 100%;
+  display: grid;
+  background-color: white;
+}
+
+.about h3 {
+  font-size: 4rem;
+  word-spacing: 15px;
+  letter-spacing: 5px;
+  margin-left: 25%;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  align-content: flex-start;
+  margin: 0 25%;
+  padding-bottom: 100px;
+}
+
+.about-text {
+  font-size: 1.25rem;
+  word-spacing: 2px;
+  letter-spacing: 1.5px;
+  padding-right: 50px;
+}
+
+.about-image img {
+  height: 350px;
+  width: 350px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+/* Work */
+
+.work {
+  width: 100%;
+  display: grid;
+  padding-bottom: 100px;
+}
+
+.work h3 {
+  margin-left: 25%;
+  font-size: 4rem;
+  word-spacing: 15px;
+  letter-spacing: 5px;
+}
+
+
+
+.work-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: flex-start;
+  margin: 0 25%;
+}
+
+.work1 {
+  width: 80%;
+  word-spacing: 1.5px;
+  letter-spacing: 1.5px;
+}
+
+.work1 img {
+  height: 500px;
+  width: 500px;
+  border-radius: 15px;
+}
+
+.work2 {
+  width: 80%;
+  word-spacing: 1.5px;
+  letter-spacing: 1.5px;
+}
+
+.work2 img {
+  height: 500px;
+  width: 500px;
+  border-radius: 15px;
+}
+
+.contact {
+  width: 100%;
+  background-color: white;
+  padding-top: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.contact-container {
+  margin: 0 25%;
+}
+
+.contact-container h3 {
+  font-size: 4rem;
+  word-spacing: 15px;
+  letter-spacing: 5px;
+}
+
+.contact-container p {
+  width: 50%;
+  word-spacing: 1.5px;
+  letter-spacing: 1.5px;
+  padding-bottom: 50px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: black;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 90%;
+}
