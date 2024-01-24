@@ -1,263 +1,287 @@
-html,body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-body {
-  background-color: #ddd;
-  font-family: 'Roboto', sans-serif;
+body{
+  min-height: 100vh;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
+/* Sticky Navigation */
 
-/* NAVIGATION */
-
-header {
-  background-color: #ddd;
-  padding: 0 20 20 20;
-}
-
-.container {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.container-nav {
+header{
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 25%;
+  height: 5vh;
 }
 
-.container.container-nav {
-  background-color: #ddd;
+header.sticky{
+  background: rgba(255, 255, 255, 0.1);
+  
 }
 
-nav a {
-  font-size: 1.5rem;
-  color: black;
+
+header .brand{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
   text-transform: uppercase;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-}
-
-nav li {
-  margin-left: 2em;
-}
-
-nav a {
   text-decoration: none;
+  letter-spacing: 2px;
+  padding-left: 100px;
 }
 
-nav a:hover,
-nav a:focus {
-  color: #fd5f00;
+header .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 120px;
+}
+
+header .menu a{
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color:#fff;
+  margin: 0 20px;
+  padding: 0 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+
+header .menu a:hover{
+  color: #000;
+  background: #fff;
+}
+
+header .btn{
+  color:#fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Main Content */
+
+.section-main{
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #001018;
+  padding: 0 100px;
+}
+
+.section-main h1 {
+  color:rgba(255, 255, 255, 0.5);
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 80px;
+  padding-bottom: 10px;
+}
+
+.section-main p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 25px;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  width: 75%;
+}
+
+/* About */
+
+.section-two-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100px;
+}
+
+.section-two-content{
+  min-height: 100vh;
+  background: #001018;
+  padding: 20px 100px;
+}
+
+.section-two-content h2{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+.section-two-content p{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+.section-two-image img {
+  height: 300px;
+}
+
+@media (max-width: 1400px) {
+  .section-main p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1274px) {
+  .section-main p {
+    width: 95%;
+  }
+} 
+
+@media (max-width: 1106px) {
+  header .btn{
+    display: block;
+    padding-right: 100px;
+  }
+
+  header .menu{
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+    min-width: 200px;
+    height: 30vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    border-radius: 5px;
+    transition: 0.5s;
+    transition-property: right;
+  }
+
+  header .menu.active {
+    right: 0;
+    height: 33vh;
+  }
+
+  header .menu .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a{
+    display: block;
+    font-size: 20px;
+    margin: 10px;
+    padding: 0 10px;
+  }
+
+  .section-main p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-main,
+  header .brand,
+  header .btn {
+    padding: 50px;
+  }
+
+  .section-main h1 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+
+  .section-main p {
+    font-size: 20px;
+    line-height: 30px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .section-main,
+  header .brand,
+  header .btn {
+    padding: 0 50px;
+  }
+
+  .section-main h1 {
+    font-size: 35px;
+    line-height: 60px;
+  }
+
+  .section-main p {
+    font-size: 15px;
+    line-height: 25px;
+    width: 100%;
+  }
+}
+/*
+@media (max-width: 540px) {
+  .section-main,
+  header .brand {
+    padding: 50px;
+  }
+
+  .section-main h1 {
+    font-size: 35px;
+    line-height: 60px;
+  }
+
+  .section-main p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-main,
+  header .brand {
+    padding: 50px;
+  }
+
+  .section-main h1 {
+    font-size: 30px;
+    line-height:50px;
+  }
+
+  .section-main p {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
 @media (max-width: 400px) {
-  .container {
-    text-align: center;
+  header .brand {
+    padding-left: 50px;
   }
 
-  .container-nav {
-    flex-direction: column;
+  .section-main{
+    padding: 50px;
   }
 
-  nav ul {
-    flex-direction: column;
+  .section-main h1 {
+    font-size: 25px;
+    line-height: 40px;
+    
   }
 
-  nav li {
-    margin: 0.8em 0;
+  .section-main p {
+    font-size: 12.5px;
+    line-height: 30px;
   }
-}
-
-/* Introduction */
-
-.intro-container {
-  margin: 150px 25%;
-  width: 30%;
-  background-color: #ddd;
-}
-
-.introduction {
-  width: 100%;
-  background-color: #ddd;
-}
-
-.introduction h1 {
-  font-size: 4rem;
-  word-spacing: 15px;
-  letter-spacing: 5px;
-}
-
-.introduction p {
-  font-size: 2rem;
-  word-spacing: 5px;
-  letter-spacing: 2.5px;
-}
-
-button {
-  width: auto;
-  background-color: black;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1.25rem;
-}
-
-/* About  */
-
-.about {
-  width: 100%;
-  display: grid;
-  background-color: white;
-}
-
-.about h3 {
-  font-size: 4rem;
-  word-spacing: 15px;
-  letter-spacing: 5px;
-  margin-left: 25%;
-}
-
-.about-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 15px;
-  align-content: flex-start;
-  margin: 0 25%;
-  padding-bottom: 100px;
-}
-
-.about-text {
-  font-size: 1.25rem;
-  word-spacing: 2px;
-  letter-spacing: 1.5px;
-  padding-right: 50px;
-}
-
-.about-image img {
-  height: 350px;
-  width: 350px;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
-}
-
-/* Work */
-
-.work {
-  width: 100%;
-  display: grid;
-  padding-bottom: 100px;
-}
-
-.work h3 {
-  margin-left: 25%;
-  font-size: 4rem;
-  word-spacing: 15px;
-  letter-spacing: 5px;
-}
-
-
-
-.work-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-content: flex-start;
-  margin: 0 25%;
-}
-
-.work1 {
-  width: 80%;
-  word-spacing: 1.5px;
-  letter-spacing: 1.5px;
-}
-
-.work1 img {
-  height: 500px;
-  width: 500px;
-  border-radius: 15px;
-}
-
-.work2 {
-  width: 80%;
-  word-spacing: 1.5px;
-  letter-spacing: 1.5px;
-}
-
-.work2 img {
-  height: 500px;
-  width: 500px;
-  border-radius: 15px;
-}
-
-.contact {
-  width: 100%;
-  background-color: white;
-  padding-top: 50px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-
-.contact-container {
-  margin: 0 25%;
-}
-
-.contact-container h3 {
-  font-size: 4rem;
-  word-spacing: 15px;
-  letter-spacing: 5px;
-}
-
-.contact-container p {
-  width: 50%;
-  word-spacing: 1.5px;
-  letter-spacing: 1.5px;
-  padding-bottom: 50px;
-}
-
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: black;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: black;
-}
-
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 90%;
-}
-
+} */
