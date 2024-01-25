@@ -113,11 +113,11 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="footer-col">
+        <div class="footer-col" id="fot-overview">
           <h4>Overview<span>.</span></h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="footer-col">
+        <div class="footer-col" id="fot-nav">
           <h4>Matthew<span>.</span></h4>
           <ul>
             <li><a href="#">Home</a></li>
@@ -127,7 +127,7 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-col" id="fot-services">
           <h4>Services<span>.</span></h4>
           <ul>
             <li><a href="#">Web Development</a></li>
@@ -135,7 +135,7 @@
             <li><a href="#">Web Design</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-col" id="fot-socials">
           <h4>Socials<span>.</span></h4>
           <div class="social-links">
            <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -168,7 +168,10 @@
 
     closeBtn.addEventListener("click", () => {
       menu.classList.remove('active');
+      menuBtn.style.display = '';
     });    
+
+
     </script>
 
 
